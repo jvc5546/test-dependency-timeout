@@ -9,7 +9,7 @@ build:
 # More info: https://www.okteto.com/docs/reference/manifest/#deploy
 deploy:
   commands:
-    - okteto deploy -f okteto-first-nested.yml --timeout 6m --wait
+    - okteto deploy -f okteto-first-nested.yml --timeout 10s --wait
 
 
 
