@@ -15,7 +15,7 @@ jobs:
     - name: Context
       uses: okteto/context@latest
       with:
-        url: https://okteto.example.com
+        url: https://okteto.jona.okteto.me
         token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: "Deploy the preview environment"
