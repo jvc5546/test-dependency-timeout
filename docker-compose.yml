@@ -1,0 +1,4 @@
+services:
+  dummy-app:
+    image: ${OKTETO_BUILD_E2E_IMAGE}
+    command: sleep 2
