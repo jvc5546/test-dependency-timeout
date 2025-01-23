@@ -12,8 +12,8 @@ deploy:
     - okteto deploy -f okteto-first-nested.yml --timeout 1h --wait
 
 dependencies:
-  getting-started:
-    repository: https://github.com/jvc5546/getting-started-debug-test-github-action
+  movies-dependency:
+    repository: https://github.com/okteto/movies.git
     branch: test-dependency
     manifest: okteto.yml
     wait: true
