@@ -18,7 +18,10 @@ jobs:
         url: https://okteto.jona.okteto.me
         token: ${{ secrets.OKTETO_TOKEN }}
 
-    - name: "Deploy the preview environment"
+    - name: Deploy preview environment
       uses: okteto/deploy-preview@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: dev-previews
+        name: pr-${{ github.event.number }}
+        timeout: 2h
