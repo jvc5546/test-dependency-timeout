@@ -1,0 +1,24 @@
+# File: .github/workflows/workflow.yml
+on: [push]
+
+name: example
+
+concurrency:
+  # more info here: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#concurrency
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  devflow:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Context
+      uses: okteto/context@latest
+      with:
+        url: https://okteto.example.com
+        token: ${{ secrets.OKTETO_TOKEN }}
+
+    - name: "Deploy the preview environment"
+      uses: okteto/deploy-preview@latest
+      with:
+        name: dev-previews
