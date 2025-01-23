@@ -15,6 +15,6 @@ dependencies:
   movies-dependency:
     repository: https://github.com/okteto/movies.git
     branch: test-dependency
-    manifest: okteto.yml
+    manifest: okteto.yaml
     wait: true
     timeout: 1h
