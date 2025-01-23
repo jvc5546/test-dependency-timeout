@@ -17,4 +17,4 @@ dependencies:
     branch: main
     manifest: okteto.yml
     wait: true
-    timeout: 2s
+    timeout: 1h
