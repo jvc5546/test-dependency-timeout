@@ -11,8 +11,6 @@ deploy:
   commands:
     - okteto deploy -f okteto-first-nested.yml --timeout 10s --wait
 
-
-
 dependencies:
   getting-started:
     repository: https://github.com/jvc5546/getting-started-debug-test-github-action
